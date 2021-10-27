@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+
 * {
 	box-sizing: border-box;
 }
@@ -5,7 +8,13 @@
 body {
 	margin: 1rem; 
 	width: calc(100vw-1rem); 
+	font-family: 'Open Sans', sans-serif;
 }
+
+a {
+	text-decoration: none;
+}
+
 .center-container {
 	display: flex;
 	flex-direction: column;
@@ -16,11 +25,12 @@ header {
 	clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
 	width: 100%;
 	height: 90vh;
-	background-color: #04043E;
+	background: linear-gradient(to top, #04043E, #000000);
 	justify-content: center;
 }
 
 .content {
+	max-width: 85%;
 	text-align: center;
 }
 
@@ -30,39 +40,174 @@ header {
 }
 
 .h1-text {
+	
+	margin-top: -2rem;
 	font-size: 4rem;
-	color: ##04043E;
+	color: linear-gradient(#04043E, #000000);
 	text-align: center; 
 }
 
-.h-bttn {
+.projects-bttn, .resume-bttn {
 	padding: 1rem 2rem;
 	font-size: 1rem;
+	font-weight: bold;
 	border-radius: 50px;
 	border: grey;
+	cursor: pointer;
+	margin: .5rem .5rem;
 }
 
-.h-bttn:hover {
+.projects-bttn:hover, .resume-bttn:hover {
 	background-color: lightgrey;
+}
+
+.links {
+	margin: 1rem 0;
+}
+
+.link {
+	color: white;
+	font-size: 2rem;
+	cursor: pointer;
+}
+
+i {
+	margin: 0 1rem;
+	
+}
+
+i:hover {
+	color: lightgrey;
 }
 
 .body-container1 {
 	height: 40vh;
 	width: 100%;
-	color: black;
+	color: #04043E;
+}
+
+.about-content {
+	max-width: 60%;
+	margin-top: -3rem;
+	text-align: left;
+	text-indent: 2rem;
+	font-size: 1.5rem;
 }
 
 .body-container2 {
 	clip-path: polygon(0 0, 100% 20vh, 100% 80%, 0 100%);
-	background-color: #04043E;
-	height: 110vh;
+	background: linear-gradient(#04043E, #000000);
+	height: 80vh;
 	width: 100%;
 }
 
+.skills-icons {
+	font-size: 9rem;
+}
+
 .body-container3 {
-	clip-path: polygon(0 20vh, 100% 0, 100% 100%, 0 100%);
-	height: 80vh;
+	height: 90vh;
 	width: 100%;
+	color: linear-gradient(#04043E, #000000);
+}
+
+.portfolio-content {
+	max-width: 80%;
+	height: 100%; 
+	width: 100%;
+	margin-top: 4rem;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+}
+
+.card {
+  perspective: 150rem;
+  position: relative;
+  height: 40rem;
+  max-width: 400px;
+  margin: 2rem;
+  box-shadow: none;
+  background: none;
+}
+
+.card-side {
+  height: 25rem;
+  border-radius: 15px;
+  transition: all 0.8s ease;
+  backface-visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 80%;
+  padding:2rem;
+  color: white
+}
+
+.card-side.back {
+  transform: rotateY(-180deg);
+  background: linear-gradient(to top, #04043E, #000000);
+}
+
+.card-side.front {
+  background: linear-gradient(to bottom, #04043E, #000000);
+}
+
+.card:hover .card-side.front {
+  transform: rotateY(180deg);
+}
+
+.card:hover .card-side.back {
+  transform: rotateY(0deg);
+}
+
+.img {
+	height: 60%;
+	text-align: center;
+}
+
+.img > h1 {
+	font-size: 1.5rem;
+}
+
+.gif {
+	height: 100%;
+	width: 100%;
+}
+
+.skills {
+	padding-top: 1rem;
+	text-align: center;
+}
+
+.skills > p {
+	border-bottom: 1px solid white;
+}
+
+.description {
+	height: 12rem;
+	text-align: center;
+	font-size: 1.5rem;
+}
+
+.card-buttons {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.card-buttons > button { 
+	border: white;
+	border-radius: 50px; 
+	padding: .5rem;
+	margin: .5rem 0;
+	width: 50%;
+	font-size: 1rem;
+	font-weight: bold;
+}
+
+.card-buttons > button:hover {
+	background-color: lightgrey;
 }
 
 

@@ -5,29 +5,69 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Portfolio</title>
 	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
 </head>
 <body>
 	<header class="center-container">
 		<div class="content font1">
 			<h1>Phillip Elliott</h1>
 			<h3>Front End Engineer</h3>
-			<button class="h-bttn">See Projects</button>
+			<div class="buttons">
+				<button class="projects-bttn">See Projects</button>
+				<button class="resume-bttn">Resume</button>
+			</div>
+			<div class="links">
+				<a href="https://github.com/Phil-Elliott"><i class="fab fa-github link"></i></a>
+				<a href="#"><i class="fab fa-linkedin link"></i></a>
+				<i class="fas fa-phone link"></i>
+				<i class="fas fa-envelope link"></i>
+			</div>
 		</div>
 	</header>
-	<h1 class="h1-text">About Me</h1>
 	<div class="body-container1 center-container">
-		<div class="content font2">
-			
+		<h1 class="h1-text">About Me</h1>
+		<div class="content about-content">
+			<p>I have a background in business and teaching. I completed my business degree in 2016. I then spent the past five years traveling and teaching around the world. I recently discovered my passion for programming and have decided to pursue a carreer in this field. I have been very busy learning and gaining the skills, that will allow me to provide value at a company. This process has been quite enjoyable and I can't even imagine how fullfilling a career as a developer will be.</p>
 		</div>
 	</div>
 	<div class="body-container2 center-container">
 		<div style="padding-top: 5rem;" class="content font1">
 			<h1>Skills</h1>
+
+			<div class="skills-icons">
+				<i style="color: orange" class="fab fa-html5"></i>
+				<i style="color: blue;" class="fab fa-css3-alt"></i>
+				<i style="color: yellow;" class="fab fa-js-square"></i>
+			</div>
 		</div>
 	</div>
-	<h1 class="h1-text">Project Portfolio</h1>
 	<div class="body-container3 center-container">
-		<div class="content font2">
+		<h1 class="h1-text">Project Portfolio</h1>
+		<div class="portfolio-content">
+			<div class="card">
+				<div class="card-side front">
+					<div>
+						<div class="img">
+							<h1>Barbershop</h1>
+							<img class="gif" src="Animation.gif">
+						</div>
+						<div class="skills">
+							<p>Html</p>
+							<p>CSS</p>
+							<p>Javascript</p>
+						</div>
+					</div>
+				</div>
+				<div class="card-side back">
+					<div class="description">
+						<p>Website for a Barbershop</p>
+					</div>
+					<div class="card-buttons">
+						<button><a style="color: black;"  href="https://phil-elliott.github.io/Barbershop/">Deploy</a></button>
+						<button><a style="color: black;" href="https://github.com/Phil-Elliott/Barbershop">Code</a></button>
+					</div>
+				</div>
+			</div>
 		</div>
 	</div>
 
@@ -37,10 +77,3 @@
 	<script type="text/javascript" src="script.js"></script>
 </body>
 </html>
-
-<!-- 
-	Background Gif 
-	About Me 
-	Skills 
-	Projects (Make them scrollable)
---> 
