@@ -25,12 +25,13 @@ a {
 	align-items: center;
 }
 
+/* Main Page */
 header {
 	clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
 	width: 100%;
-	height: 90vh;
 	background: linear-gradient(to top, #04043E, #000000);
 	justify-content: center;
+	padding: 6rem 0 9rem;
 }
 
 .content {
@@ -43,15 +44,14 @@ header {
 	color: white;
 }
 
-.h1-text {
-	
-	margin-top: -2rem;
+.h1-text {	
 	font-size: 4rem;
 	color: linear-gradient(#04043E, #000000);
 	text-align: center; 
+	margin: 0;
 }
 
-.projects-bttn, .resume-bttn {
+.projects-bttn {
 	padding: 1rem 2rem;
 	font-size: 1rem;
 	font-weight: bold;
@@ -61,7 +61,7 @@ header {
 	margin: .5rem .5rem;
 }
 
-.projects-bttn:hover, .resume-bttn:hover {
+.projects-bttn:hover {
 	background-color: lightgrey;
 }
 
@@ -83,44 +83,49 @@ i {
 i:hover {
 	color: lightgrey;
 }
+/* End of Main Page */
 
+/* Start of About Page */
 .body-container1 {
-	height: 40vh;
 	width: 100%;
 	color: #04043E;
 }
 
 .about-content {
 	max-width: 60%;
-	margin-top: -3rem;
 	text-align: left;
 	text-indent: 2rem;
 	font-size: 1.5rem;
 }
+/* End of About Page */
 
+/* Start of Skills Page */
 .body-container2 {
 	clip-path: polygon(0 0, 100% 20vh, 100% 80%, 0 100%);
 	background: linear-gradient(#04043E, #000000);
-	height: 80vh;
 	width: 100%;
+	padding: 3rem 0 10rem;
 }
 
 .skills-icons {
 	font-size: 9rem;
 }
+/* End of Skills Page */
 
+/* Start of Projects Page */
 .body-container3 {
-	height: 90vh;
 	width: 100%;
 	color: linear-gradient(#04043E, #000000);
+	padding: 3rem 0 7rem;
 }
 
 .portfolio-content {
+	padding-top: 5rem;
 	max-width: 70%; 
 	width: 100%;
-	margin-top: 4rem;
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
+	grid-gap: 1rem;
 }
 
 .card {
@@ -128,7 +133,6 @@ i:hover {
   position: relative;
   height: 25rem;
   max-width: 400px;
-  margin: 2rem;
   box-shadow: none;
   background: none;
 }
@@ -142,7 +146,7 @@ i:hover {
   top: 0;
   left: 0;
   width: 80%;
-  padding:2rem;
+  padding:1rem;
   color: white
 }
 
@@ -212,5 +216,25 @@ i:hover {
 .card-buttons > button:hover {
 	background-color: lightgrey;
 }
+/* End of Projects Page */
 
+/* Make it responsive */
+@media only screen and (max-width: 1000px) {
 
+.portfolio-content {
+	grid-template-columns: 1fr;
+}
+
+}
+
+/* Make it responsive for phones */
+@media only screen and (max-width: 450px) {
+
+.about-content {
+	max-width: 70%;
+	text-align: left;
+	text-indent: 1rem;
+	font-size: 1rem;
+}
+
+}
